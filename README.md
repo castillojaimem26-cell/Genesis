@@ -1,4 +1,4 @@
-# Genesis - Sistema de Gestión Hospitalaria
+# Milagros_13 - Sistema de Gestión Hospitalaria
 
 Sistema para la administración de pacientes, doctores, especialidades, citas y historial clínico.
 
@@ -12,7 +12,7 @@ Sistema para la administración de pacientes, doctores, especialidades, citas y 
 ### Instalación Local
 ```bash
 git clone https://github.com/castillojaimem26-cell/Genesis.git
-cd Genesis
+cd Milagros_13
 composer install
 cp .env.example .env
 php artisan key:generate
