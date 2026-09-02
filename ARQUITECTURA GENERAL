@@ -1,0 +1,143 @@
+genesis-hospital/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Auth/
+│   │   │   │   ├── LoginController.php
+│   │   │   │   ├── ForgotPasswordController.php
+│   │   │   │   └── ResetPasswordController.php
+│   │   │   ├── DashboardController.php
+│   │   │   ├── PatientController.php
+│   │   │   ├── AppointmentController.php
+│   │   │   ├── DoctorController.php
+│   │   │   ├── MedicalRecordController.php
+│   │   │   ├── HospitalizationController.php
+│   │   │   ├── NurseController.php
+│   │   │   ├── PharmacyController.php
+│   │   │   ├── LaboratoryController.php
+│   │   │   ├── BillingController.php
+│   │   │   ├── ReportController.php
+│   │   │   ├── UserController.php
+│   │   │   ├── RoleController.php
+│   │   │   ├── NotificationController.php
+│   │   │   └── AuditLogController.php
+│   │   ├── Middleware/
+│   │   │   ├── RoleMiddleware.php
+│   │   │   └── AuditMiddleware.php
+│   │   ├── Requests/
+│   │   │   ├── StorePatientRequest.php
+│   │   │   ├── UpdatePatientRequest.php
+│   │   │   ├── StoreAppointmentRequest.php
+│   │   │   ├── UpdateAppointmentRequest.php
+│   │   │   ├── StoreDoctorRequest.php
+│   │   │   └── UpdateDoctorRequest.php
+│   │   └── Kernel.php
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Role.php
+│   │   ├── Permission.php
+│   │   ├── Patient.php
+│   │   ├── Doctor.php
+│   │   ├── Specialty.php
+│   │   ├── Appointment.php
+│   │   ├── MedicalRecord.php
+│   │   ├── Consultation.php
+│   │   ├── Diagnosis.php
+│   │   ├── Prescription.php
+│   │   ├── Medication.php
+│   │   ├── MedicationMovement.php
+│   │   ├── Hospitalization.php
+│   │   ├── Room.php
+│   │   ├── Bed.php
+│   │   ├── VitalSign.php
+│   │   ├── Procedure.php
+│   │   ├── LaboratoryTest.php
+│   │   ├── LaboratoryResult.php
+│   │   ├── Invoice.php
+│   │   ├── InvoiceItem.php
+│   │   ├── Payment.php
+│   │   ├── Notification.php
+│   │   └── AuditLog.php
+│   ├── Policies/
+│   │   └── PatientPolicy.php
+│   └── Services/
+│       └── DashboardService.php
+├── database/
+│   ├── migrations/
+│   │   ├── 0001_01_01_000000_create_users_table.php
+│   │   ├── 0001_01_01_000001_create_cache_table.php
+│   │   ├── 0001_01_01_000002_create_jobs_table.php
+│   │   ├── 2024_01_01_000001_create_roles_table.php
+│   │   ├── 2024_01_01_000002_create_permissions_table.php
+│   │   ├── 2024_01_01_000003_create_role_permission_table.php
+│   │   ├── 2024_01_01_000004_create_patients_table.php
+│   │   ├── 2024_01_01_000005_create_specialties_table.php
+│   │   ├── 2024_01_01_000006_create_doctors_table.php
+│   │   ├── 2024_01_01_000007_create_appointments_table.php
+│   │   ├── 2024_01_01_000008_create_medical_records_table.php
+│   │   ├── 2024_01_01_000009_create_consultations_table.php
+│   │   ├── 2024_01_01_000010_create_diagnoses_table.php
+│   │   ├── 2024_01_01_000011_create_prescriptions_table.php
+│   │   ├── 2024_01_01_000012_create_medications_table.php
+│   │   ├── 2024_01_01_000013_create_medication_movements_table.php
+│   │   ├── 2024_01_01_000014_create_rooms_table.php
+│   │   ├── 2024_01_01_000015_create_beds_table.php
+│   │   ├── 2024_01_01_000016_create_hospitalizations_table.php
+│   │   ├── 2024_01_01_000017_create_vital_signs_table.php
+│   │   ├── 2024_01_01_000018_create_procedures_table.php
+│   │   ├── 2024_01_01_000019_create_laboratory_tests_table.php
+│   │   ├── 2024_01_01_000020_create_laboratory_results_table.php
+│   │   ├── 2024_01_01_000021_create_invoices_table.php
+│   │   ├── 2024_01_01_000022_create_invoice_items_table.php
+│   │   ├── 2024_01_01_000023_create_payments_table.php
+│   │   ├── 2024_01_01_000024_create_notifications_table.php
+│   │   └── 2024_01_01_000025_create_audit_logs_table.php
+│   ├── seeders/
+│   │   ├── DatabaseSeeder.php
+│   │   ├── RoleSeeder.php
+│   │   ├── SpecialtySeeder.php
+│   │   ├── UserSeeder.php
+│   │   ├── PatientSeeder.php
+│   │   ├── DoctorSeeder.php
+│   │   ├── RoomSeeder.php
+│   │   ├── MedicationSeeder.php
+│   │   └── AppointmentSeeder.php
+│   └── factories/
+│       ├── UserFactory.php
+│       ├── PatientFactory.php
+│       ├── DoctorFactory.php
+│       └── AppointmentFactory.php
+├── resources/
+│   └── views/
+│       ├── layouts/
+│       │   └── app.blade.php
+│       ├── partials/
+│       │   ├── sidebar.blade.php
+│       │   ├── header.blade.php
+│       │   └── footer.blade.php
+│       ├── auth/
+│       │   ├── login.blade.php
+│       │   ├── forgot-password.blade.php
+│       │   └── reset-password.blade.php
+│       ├── dashboard/
+│       │   └── index.blade.php
+│       ├── patients/
+│       │   ├── index.blade.php
+│       │   ├── create.blade.php
+│       │   ├── edit.blade.php
+│       │   └── show.blade.php
+│       ├── appointments/
+│       │   ├── index.blade.php
+│       │   ├── create.blade.php
+│       │   └── edit.blade.php
+│       ├── doctors/
+│       │   ├── index.blade.php
+│       │   ├── create.blade.php
+│       │   ├── edit.blade.php
+│       │   └── show.blade.php
+│       └── ...
+├── routes/
+│   └── web.php
+└── public/
+    └── css/
+        └── genesis.css
