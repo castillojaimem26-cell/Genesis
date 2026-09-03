@@ -43,6 +43,41 @@ class User extends Authenticatable
         return $this->hasOne(Doctor::class);
     }
 
+    public function appointmentsCreated()
+    {
+        return $this->hasMany(Appointment::class, 'created_by');
+    }
+
+    public function medicationMovements()
+    {
+        return $this->hasMany(MedicationMovement::class);
+    }
+
+    public function vitalSigns()
+    {
+        return $this->hasMany(VitalSign::class);
+    }
+
+    public function procedures()
+    {
+        return $this->hasMany(Procedure::class);
+    }
+
+    public function laboratoryResultsApproved()
+    {
+        return $this->hasMany(LaboratoryResult::class, 'approved_by');
+    }
+
+    public function invoices()
+    {
+        return $this->hasMany(Invoice::class);
+    }
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
+
     public function notifications()
     {
         return $this->hasMany(Notification::class);
@@ -51,40 +86,5 @@ class User extends Authenticatable
     public function auditLogs()
     {
         return $this->hasMany(AuditLog::class);
-    }
-
-    public function medicationMovements()
-    {
-        return $this->hasMany(MedicationMovement::class);
-    }
-
-    public function hospitalizations()
-    {
-        return $this->hasMany(Hospitalization::class, 'admitted_by');
-    }
-
-    public function vitalSigns()
-    {
-        return $this->hasMany(VitalSign::class, 'recorded_by');
-    }
-
-    public function procedures()
-    {
-        return $this->hasMany(Procedure::class, 'performed_by');
-    }
-
-    public function laboratoryResultsUploaded()
-    {
-        return $this->hasMany(LaboratoryResult::class, 'uploaded_by');
-    }
-
-    public function laboratoryResultsApproved()
-    {
-        return $this->hasMany(LaboratoryResult::class, 'approved_by');
-    }
-
-    public function payments()
-    {
-        return $this->hasMany(Payment::class, 'registered_by');
     }
 }
